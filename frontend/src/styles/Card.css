@@ -1,0 +1,62 @@
+.card {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0.5rem 0 0 0;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  background-color: var(--background-light);
+}
+
+.card-gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #059669 100%);
+  color: white;
+  border: none;
+}
+
+.card-gradient-secondary {
+  background: linear-gradient(135deg, var(--secondary) 0%, #2563eb 100%);
+  color: white;
+  border: none;
+}
+
+.card-gradient-danger {
+  background: linear-gradient(135deg, var(--error) 0%, #dc2626 100%);
+  color: white;
+  border: none;
+}
+
+.card-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+}

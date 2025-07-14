@@ -1,0 +1,193 @@
+.dashboard {
+  padding: 1.5rem;
+}
+
+.dashboard-header {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  color: white;
+}
+
+.summary-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.summary-card-icon {
+  opacity: 0.9;
+}
+
+.summary-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.summary-card-description {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.transactions-section {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.transactions-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.transactions-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.transactions-list {
+  padding: 1.5rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: var(--background-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+}
+
+.transaction-item:last-child {
+  margin-bottom: 0;
+}
+
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.transaction-icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction-icon.receita {
+  background-color: #d1fae5;
+  color: var(--success);
+}
+
+.transaction-icon.despesa {
+  background-color: #fee2e2;
+  color: var(--error);
+}
+
+.transaction-info h4 {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.transaction-info p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.transaction-right {
+  text-align: right;
+}
+
+.transaction-value {
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.transaction-value.receita {
+  color: var(--success);
+}
+
+.transaction-value.despesa {
+  color: var(--error);
+}
+
+.transaction-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .summary-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

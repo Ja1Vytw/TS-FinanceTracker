@@ -1,0 +1,90 @@
+# Checklist Completo - Controle de Finanças Pessoais
+
+## BACKEND (Spring Boot + MongoDB)
+
+### ✅ Já feito
+- Estrutura Spring Boot criada
+- Dependências configuradas (Spring, MongoDB, Security, JWT, Lombok, JUnit, Swagger)
+- Modelos: User, Transacao, Categoria, Alerta
+- Repositórios, serviços e controllers REST
+- Endpoints de autenticação JWT (login/cadastro)
+- Spring Security configurado (JWT, proteção de rotas)
+- Exportação/importação de dados (CSV/PDF)
+- Dashboard e filtros
+- Documentação Swagger/OpenAPI
+- CORS habilitado
+- Testes unitários básicos
+- Projeto compila e roda com Java 21 e Maven
+- Swagger liberado para acesso público
+
+### 🚩 O que falta/fazer
+- Testar todos os fluxos de autenticação e CRUD
+- Validar regras de negócio (saldo, alertas, categorias customizadas)
+- Garantir proteção dos endpoints
+- Ajustar mensagens de erro/validações se necessário
+
+### 💡 Opcionais/Sugestões
+- Testes automatizados mais completos
+- Autenticação social (Google, Facebook)
+- Logs e monitoramento
+- Documentação para usuários finais
+- Deploy em cloud (Heroku, Railway, AWS, etc.)
+- CI/CD (GitHub Actions, etc.)
+
+### 🖥️ Migrar para outro PC
+- Instalar Java 21, Maven
+- (Opcional) Plugin Lombok no IDE
+- Ter acesso ao MongoDB Atlas
+- Ajustar string de conexão se necessário
+- Rodar: mvn clean install && mvn spring-boot:run
+
+---
+
+## FRONTEND (React)
+
+### ✅ Já feito
+- Estrutura inicial criada (Vite + React)
+- Organização de pastas (api, components, pages, hooks, context)
+- Integração com backend via Axios
+- Contexto e hook de autenticação
+- Páginas de login/cadastro
+- Navegação com React Router
+- Rotas privadas protegidas
+
+### 🚩 O que falta/fazer
+- Finalizar telas de dashboard, gráficos e relatórios
+- Implementar upload de extrato bancário (CSV)
+- Integrar exportação de relatórios (PDF/CSV)
+- Melhorar UX/UI
+- Testar integração completa com backend
+
+### 💡 Opcionais/Sugestões
+- Dark mode
+- Responsividade
+- Testes automatizados (Jest, React Testing Library)
+- Deploy em Vercel, Netlify, Railway, etc.
+- Documentação de uso
+
+### 🖥️ Migrar para outro PC
+- Instalar Node.js (LTS)
+- Rodar npm install
+- Rodar npm run dev
+- Ajustar variáveis de ambiente (ex: VITE_API_URL)
+
+---
+
+## GUIA DE DEPLOY
+
+### Backend (Spring Boot)
+1. Gere o jar: mvn clean package
+2. Rode: java -jar target/backend-1.0-SNAPSHOT.jar
+3. (Cloud) Suba para Heroku, Railway, AWS, etc. Configure variáveis de ambiente (MONGODB_URI, JWT_SECRET, etc.)
+
+### Frontend (React)
+1. Gere build: npm run build
+2. Suba a pasta dist/ para Vercel, Netlify, Railway, etc.
+3. Configure variáveis de ambiente (VITE_API_URL)
+
+---
+
+**Dúvidas? Consulte o README ou peça ajuda ao dev responsável!** 

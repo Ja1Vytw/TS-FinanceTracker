@@ -1,0 +1,129 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.stepper-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.stepper-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 60%;
+  right: -40%;
+  height: 2px;
+  background-color: var(--border);
+  z-index: 1;
+}
+
+.stepper-step.completed:not(:last-child)::after {
+  background-color: var(--primary);
+}
+
+.stepper-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.stepper-circle.pending {
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.stepper-circle.current {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.stepper-circle.completed {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: white;
+}
+
+.stepper-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.stepper-step.current .stepper-label {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.stepper-step.completed .stepper-label {
+  color: var(--primary);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .stepper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stepper-step {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .stepper-step:not(:last-child)::after {
+    display: none;
+  }
+
+  .stepper-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    bottom: -1rem;
+    width: 2px;
+    background-color: var(--border);
+  }
+
+  .stepper-step.completed:not(:last-child)::before {
+    background-color: var(--primary);
+  }
+
+  .stepper-label {
+    margin-top: 0;
+    margin-left: 1rem;
+    text-align: left;
+  }
+}

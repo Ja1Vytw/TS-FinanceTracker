@@ -1,0 +1,17 @@
+.chart-container {
+  background-color: var(--background);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.chart-wrapper {
+  height: 20rem;
+}

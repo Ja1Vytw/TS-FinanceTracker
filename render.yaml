@@ -1,0 +1,33 @@
+# Configuração de Deploy para Render.com
+# Este arquivo automatiza o deploy do backend no Render
+
+services:
+  # Backend Spring Boot
+  - type: web
+    name: techsanca-backend
+    env: java
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: ./mvnw clean install -DskipTests
+    startCommand: java -jar target/backend-1.0-SNAPSHOT.jar
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb://localhost:27017/finance
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+        sync: false
+      - key: SERVER_PORT
+        value: 8080
+        sync: false
+    healthCheckPath: /health
+    autoDeploy: true
+    branch: main
+
+databases:
+  # MongoDB (opcional - você pode usar MongoDB Atlas)
+  - name: techsanca-mongodb
+    databaseName: finance
+    plan: free
+    region: oregon 

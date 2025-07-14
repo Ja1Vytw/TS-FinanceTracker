@@ -1,0 +1,162 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Paleta de cores */
+  --primary: #10b981;
+  --secondary: #3b82f6;
+  --neutral: #6b7280;
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --background: #ffffff;
+  --background-light: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Bordas */
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Utilitários */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animação de loading */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .md\\:block {
+    display: block;
+  }
+
+  .md\\:hidden {
+    display: none;
+  }
+
+  .md\\:flex {
+    display: flex;
+  }
+
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
