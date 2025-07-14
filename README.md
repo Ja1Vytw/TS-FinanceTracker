@@ -77,8 +77,7 @@ Antes de começar, certifique-se de ter instalado:
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/techsanca-finance.git
-cd techsanca-finance
+git clone https://github.com/Ja1Vytw/TS-FinanceTracker.git
 ```
 
 ### 2. Configuração do Backend
@@ -139,8 +138,8 @@ npm install
 Edite o arquivo `frontend/src/services/api.js` e atualize a URL da API:
 
 ```javascript
-const API_BASE_URL = 'http://localhost:8080/api' // Para desenvolvimento local
-// const API_BASE_URL = 'https://seu-backend.railway.app/api' // Para produção
+const API_BASE_URL = 'http://localhost:8080/api' // para desenvolimento local
+// const API_BASE_URL = 'https://seu-backend.railway.app/api' // se for para produção
 ```
 
 #### 3.3. Execute o Frontend
@@ -149,7 +148,7 @@ const API_BASE_URL = 'http://localhost:8080/api' // Para desenvolvimento local
 npm run dev
 ```
 
-O frontend estará disponível em: `http://localhost:5173`
+O frontend estará disponível em: `http://localhost:5173` // por padrão, mas pode ser alterado caso já esteja em uso
 
 ## 📱 Como Usar
 

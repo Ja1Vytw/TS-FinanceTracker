@@ -1,1 +1,5 @@
-# Não subir configurações sensíveis do backend/src/main/resources/application.properties 
+# Não subir configurações sensíveis do backend
+backend/src/main/resources/application.properties
+
+# Não subir arquivos compilados do Maven
+backend/target/ 

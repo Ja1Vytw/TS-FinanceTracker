@@ -1,8 +1,4 @@
-# Configuração de Deploy para Render.com
-# Este arquivo automatiza o deploy do backend no Render
-
 services:
-  # Backend Spring Boot
   - type: web
     name: techsanca-backend
     env: java
@@ -26,7 +22,6 @@ services:
     branch: main
 
 databases:
-  # MongoDB (opcional - você pode usar MongoDB Atlas)
   - name: techsanca-mongodb
     databaseName: finance
     plan: free
