@@ -4,11 +4,11 @@ FROM openjdk:17-jdk-slim
 # Definir diretório de trabalho
 WORKDIR /app
 
-# Copiar arquivo pom.xml
-COPY pom.xml .
+# Copiar arquivo pom.xml da pasta backend
+COPY backend/pom.xml .
 
-# Copiar código fonte
-COPY src ./src
+# Copiar código fonte da pasta backend
+COPY backend/src ./src
 
 # Instalar Maven e compilar
 RUN apt-get update && apt-get install -y maven
