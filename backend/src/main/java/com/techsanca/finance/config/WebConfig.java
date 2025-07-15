@@ -12,10 +12,15 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("*")
+                // Permite CORS apenas para o domínio do frontend em produção
+                registry.addMapping("/api/**")
+                        .allowedOrigins(
+                            "https://ts-finance-tracker.vercel.app", // Frontend em produção
+                            "http://localhost:5173" // Frontend local (Vite)
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(true); // Permite envio de cookies/autenticação
             }
         };
     }
