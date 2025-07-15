@@ -1,7 +1,7 @@
 // Configurações da aplicação
 const config = {
   // URL da API - pode ser alterada para produção
-  API_BASE_URL: import.meta.env.VITE_API_URL || 'http://localhost:8080/api',
+  API_BASE_URL: (import.meta.env.VITE_API_URL || 'http://localhost:8080') + '/api',
   
   // Configurações de autenticação
   AUTH: {
