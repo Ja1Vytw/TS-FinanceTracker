@@ -4,6 +4,12 @@ import config from '../config/config.js'
 // Configuração base da API
 const API_BASE_URL = config.API_BASE_URL
 
+// Debug: log das configurações
+console.log('=== CONFIGURAÇÃO DA API ===')
+console.log('VITE_API_URL:', config.DEBUG.VITE_API_URL)
+console.log('API_BASE_URL:', config.DEBUG.FINAL_URL)
+console.log('Config completo:', config)
+
 // Criar instância do axios
 const api = axios.create({
   baseURL: API_BASE_URL,

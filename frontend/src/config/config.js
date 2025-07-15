@@ -3,6 +3,12 @@ const config = {
   // URL da API - pode ser alterada para produção
   API_BASE_URL: (import.meta.env.VITE_API_URL || 'http://localhost:8080') + '/api',
   
+  // Debug: log da URL da API
+  DEBUG: {
+    VITE_API_URL: import.meta.env.VITE_API_URL,
+    FINAL_URL: (import.meta.env.VITE_API_URL || 'http://localhost:8080') + '/api'
+  },
+  
   // Configurações de autenticação
   AUTH: {
     TOKEN_KEY: 'jwt_token',
